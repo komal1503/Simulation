@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.heads{
+    margin-top: 2rem;
+    color: red;
+    background-color: white;
+    position: relative;
+}
+
+.main{
+    margin-top: 4rem;
+    display: flex;
+    height: 20rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input{
+    background-color: red;
+}
+.calc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:100%;
+   
+}
+
+.adj{
+    box-shadow: 1rem 1rem 1rem black;
+}
+
+.mc{
+    box-shadow: 1rem 1rem 1rem black;
+}
+
+.machine{
+    width: 15rem;
+    height:12rem;
+}
+
+.adjbtn{
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}
+
+.adjbtn:active{
+    background-color: green;
+}
+
+.heading_btn {
+   position: absolute;
+   top: 2px;
+   right: 1rem;
+}
+
+.heading {
+   padding-top: 1rem;
+    
+}

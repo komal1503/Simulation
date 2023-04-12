@@ -1,0 +1,14 @@
+.mains{
+    height: 100%;
+    padding: 5rem;
+}
+
+.data{
+    background-color: white;
+    width: 10rem;
+    margin-left: 36rem;
+    padding: 1rem;
+    margin-bottom: 5rem;
+    border-style: solid;
+    border-color: #000;
+}
