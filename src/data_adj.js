@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
+import "./data_adj.css"
 function Data(props) {
   const [details, setDetails] = useState({
     Machine_type: "",
@@ -32,7 +32,10 @@ function Data(props) {
   };
 
   return (
+   
     <div className="form">
+      <h1>Adjuster Data Entry</h1>
+      <div className="datas">
       <input
         type="text"
         placeholder="Adjuster Type"
@@ -53,7 +56,8 @@ function Data(props) {
         onChange={(e) => setDetails({ ...details, ID: e.target.value })}
       />
       <button onClick={PostData}>Submit</button>
-      <button>Show Data</button>
+     
+    </div>
     </div>
   );
 }

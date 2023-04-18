@@ -8,6 +8,7 @@ import Types from "./types";
 import Mc_Calculations from "./Mc_Calculations";
 import Adj_Calculations from "./Adj_Calculations";
 import { Route, Routes } from "react-router-dom";
+import Mttf from "./Mttf";
 
 export default class App extends Component {
   constructor(props) {
@@ -60,6 +61,11 @@ export default class App extends Component {
             exact
             path="/Mc_Calculations"
             element={<Mc_Calculations user={this.state.user} />}
+          />
+          <Route
+            exact
+            path="/Mttf"
+            element={<Mttf user={this.state.user} />}
           />
         </Routes>
       </div>

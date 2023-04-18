@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import fire from "./config/fire";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,  } from "react-router-dom";
 import "./home.css";
 import image from "./components/machine.jpg";
 import adjuster from "./components/adjuster.jpeg";
@@ -22,6 +22,10 @@ const Home = () => {
 
   const Mc_Calculations = () => {
     navigate("/Mc_Calculations");
+  };
+
+  const Mttf = () => {
+    navigate("/Mttf");
   };
 
   return (
@@ -52,6 +56,13 @@ const Home = () => {
             <img src={image} className="machine" />
             <button className="adjbtn" onClick={Mc_Calculations}>
               Machine Calculations
+            </button>
+          </div>
+
+          <div className="mc">
+            <img src={image} className="machine" />
+            <button className="adjbtn" onClick={Mttf}>
+            Optimization
             </button>
           </div>
         </div>

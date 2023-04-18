@@ -54,7 +54,7 @@ function Data(props) {
     <>
       <h1 className="utzhead">MACHINE UTILISATION</h1>
       <div className="form">
-        <img src={image} className="mcimg" />
+        
         <div className="creds">
           <form onSubmit={handleSubmit}>
             <input

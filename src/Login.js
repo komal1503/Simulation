@@ -80,6 +80,7 @@ export default class Login extends Component {
               value={this.state.password}
               required
             ></input>
+            
           </div>
           <div className="buttons">
             <button

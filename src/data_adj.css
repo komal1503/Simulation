@@ -1,0 +1,15 @@
+.datas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15rem;
+}
+.submit:active{
+    background-color:green;
+}
+
+.submit {
+    background-color: aqua;
+  
+}
+

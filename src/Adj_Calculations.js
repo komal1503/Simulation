@@ -52,15 +52,15 @@ function Data(props) {
 
   return (
     <>
-      <h1 className="utzhead">MACHINE UTILISATION</h1>
+      <h1 className="utzhead">ADJUSTER UTILISATION</h1>
       <div className="form">
-        <img src={image} className="mcimg" />
+       
         <div className="creds">
           <form onSubmit={handleSubmit}>
             <input
               type="text"
               id="text"
-              placeholder="Machine Type"
+              placeholder="Expertise"
               onChange={(e) =>
                 setDetails({ ...details, Machine_type: e.target.value })
               }

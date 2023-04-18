@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import fire from "./config/fire";
 import { useNavigate } from "react-router-dom";
 import adjuster from "./components/adjuster.jpeg";
+import machine from "./components/datamc.png"
 import "./types.css";
 const Home = () => {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ const Home = () => {
         <h1 className="data">INPUT DATA</h1>
         <div className="calc">
           <div className="mc">
-            <img src={adjuster} className="machine" />
+            <img src={machine} className="machine" />
             <button className="adjbtn" onClick={mc_handleNavigation}>
               Machine
             </button>
