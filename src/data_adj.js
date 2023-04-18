@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./data_adj.css"
+import { useNavigate,  } from "react-router-dom";
 function Data(props) {
   const [details, setDetails] = useState({
     Machine_type: "",
@@ -31,6 +32,7 @@ function Data(props) {
     );
   };
 
+ 
   return (
    
     <div className="form">
@@ -56,7 +58,7 @@ function Data(props) {
         onChange={(e) => setDetails({ ...details, ID: e.target.value })}
       />
       <button onClick={PostData}>Submit</button>
-     
+      <button>Show data</button>
     </div>
     </div>
   );

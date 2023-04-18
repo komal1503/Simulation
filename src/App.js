@@ -9,6 +9,7 @@ import Mc_Calculations from "./Mc_Calculations";
 import Adj_Calculations from "./Adj_Calculations";
 import { Route, Routes } from "react-router-dom";
 import Mttf from "./Mttf";
+import Show from "./show";
 
 export default class App extends Component {
   constructor(props) {
@@ -67,7 +68,14 @@ export default class App extends Component {
             path="/Mttf"
             element={<Mttf user={this.state.user} />}
           />
+           <Route
+            exact
+            path="/show"
+            element={<Show user={this.state.user} />}
+          />
         </Routes>
+       
+     
       </div>
     );
   }
