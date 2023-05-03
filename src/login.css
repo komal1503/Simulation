@@ -58,11 +58,17 @@ h1{
 
 input#email{
     height: 2rem;
-    
+    margin-bottom: 1rem;
 }
 
 input#password{
     height: 2rem;
+    margin-bottom: 1rem;
+}
+
+input#Company{
+    height: 2rem;
+    margin-bottom: 1rem;
 }
 
 .buttons{

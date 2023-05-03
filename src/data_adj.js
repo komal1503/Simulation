@@ -7,13 +7,14 @@ function Data(props) {
     Machine_type: "",
     Active_hours: "",
     ID: "",
+    Availability:"",
     uid: props.user._delegate.uid,
   });
 
   const PostData = async (e) => {
     e.preventDefault();
     alert("submitted");
-    const { Machine_type, Active_hours, ID, uid } = details;
+    const { Machine_type, Active_hours, ID,Availability, uid } = details;
 
     const res = await fetch(
       "https://simulation-42792-default-rtdb.firebaseio.com/adjusterform.json",
@@ -26,6 +27,7 @@ function Data(props) {
           Machine_type,
           Active_hours,
           ID,
+          Availability,
           uid,
         }),
       }
@@ -57,8 +59,14 @@ function Data(props) {
         placeholder="Adjuster_ID"
         onChange={(e) => setDetails({ ...details, ID: e.target.value })}
       />
+
+      <input
+        type="text"
+        placeholder="Availability"
+        onChange={(e) => setDetails({ ...details, Availability: e.target.value })}
+      />
       <button onClick={PostData}>Submit</button>
-      <button>Show data</button>
+      
     </div>
     </div>
   );

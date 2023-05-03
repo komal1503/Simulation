@@ -9,7 +9,7 @@ function Data(props) {
     total_hours: "",
   });
   const [machhrs, setMachhrs] = useState(0);
-
+  const [active, setActive] = useState(0);
   const [avgmachhrs, setAvgmachhrs] = useState(0);
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -48,8 +48,19 @@ function Data(props) {
       avlmachhrs.soldering;
     setMachhrs(avlmachhrs[Machine_type.toLowerCase()]);
     setAvgmachhrs(totalhrs / machines.length);
-  };
 
+
+    let avl = 0;
+
+    machines.forEach((currValue) => {
+          if(currValue.Availability.toLowerCase() === 'y') {avl++;}
+      });
+  
+      setActive(avl);
+  };
+  
+ 
+ 
   return (
     <>
       <h1 className="utzhead">ADJUSTER UTILISATION</h1>
@@ -82,14 +93,19 @@ function Data(props) {
         <div className="output">
           {machhrs !== 0 && (
             <div>
-              <p>Machine Utilization: {machhrs / details.total_hours}</p>
+              <p>Adjuster Utilization: {machhrs / details.total_hours}</p>
             </div>
           )}
           {avgmachhrs !== 0 && (
             <div>
               <p>
-                Average Machine Utilization: {avgmachhrs / details.total_hours}
+                Average Adjuster Utilization: {avgmachhrs / details.total_hours}
               </p>
+            </div>
+          )}
+          {active !== 0 && (
+            <div>
+              <p>Availability: {active}</p>
             </div>
           )}
         </div>
